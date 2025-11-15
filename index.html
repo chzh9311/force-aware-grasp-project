@@ -25,7 +25,7 @@
   <!-- TODO: Same as description above -->
   <meta property="og:description" content="Contact-based grasp generation plays a crucial role in various applications. Recent methods typically focus on the geometric structure of objects, producing grasps with diverse hand poses and plausible contact points. However, these approaches often overlook the physical attributes of the grasp, specifically the contact force, leading to reduced stability of the grasp. In this paper, we focus on stable grasp generation using explicit contact force predictions. First, we define a force-aware contact representation by transforming the normal force value into discrete levels and encoding it using a one-hot vector. Next, we introduce force-aware stability constraints. We define the stability problem as an acceleration minimization task and explicitly relate stability with contact geometry by formulating the underlying physical constraints. Finally, we present a pose optimizer that systematically integrates our contact representation and stability constraints to enable stable grasp generation. We show that these constraints can help identify key contact points for stability which provide effective initialization and guidance for optimization towards a stable grasp. Experiments are carried out on two public benchmarks, showing that our method brings about 20% improvement in stability metrics and adapts well to novel objects.">
   <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://chzh9311.github.io/force_aware_grasp">
+  <meta property="og:url" content="https://chzh9311.github.io/force-aware-grasp">
   <!-- TODO: Create a 1200x630px preview image and update path -->
   <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
@@ -317,20 +317,18 @@
 </section>
 
 
-<!-- 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
+        <source src="static/videos/simu_demo.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Our method presents much more successful grasps than previous ones. (Red = failure)
       </h2>
     </div>
   </div>
 </section>
-End teaser video -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
