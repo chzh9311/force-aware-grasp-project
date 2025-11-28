@@ -363,9 +363,23 @@
         </h2>
       </div>
       <div class="item">
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/labelled_forces.png" alt="Labelled Forces" loading="lazy" style="width:50%; display: block; margin-left: auto; margin-right: auto;"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          The labelled contact forces using our automatic labelling pipeline.
+        </h2>
+      </div>
+
+      <div class="item">
+        <img src="static/images/QuanlitativeBoth.png" alt="Quanlitative Analysis" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          The generated human grasps, compared with previous state-of-the-art methods.
+        </h2>
+      </div>
+
+      <div class="item">
+        <img src="static/images/quantitative_result.png" alt="Quantitative Analysis" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Quantitative comparison on two public benchmarks. Our method outperforms previous methods in terms of stability metrics by a large margin.
         </h2>
       </div>
   </div>
@@ -374,27 +388,70 @@
 </section>
 <!-- End image carousel -->
 
-
-
-
-<!-- Youtube video 
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3" style="text-align:center">Incorporating contact forces in human grasp generation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+        <img src="static/images/teaser1.png" alt="Teaser" loading="lazy"/>
+        <p style="text-align: justify;">
+          The relationship between grasping geometry and contact forces on general objects is currently under-explored. Meanwhile, we find that if the contact forces can be predicted, then modeling stability in contact-based grasp synthesis will be much easier. With explicit contact forces predicted, we can <b>1) explicitly formulate stability; 2) identify key contact points that are most critical for stability.</b> Thus, we focus on modeling the contact forces to facilitate stable grasp generation.
+        </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-End youtube video -->
 
+<section class="hero is-small>
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" style="text-align:center">Automatic Contact Force Labelling</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <img src="static/images/Force_label_pipeline.png" alt="Labelling" loading="lazy"/>
+        <p style="text-align: justify;">
+          We propose an automatic contact force labelling pipeline to label the contact forces on hand-object interaction datasets. Given a human-object interaction sample, we first do convex decomposition separately. Then, we set up a physics simulation environment to simulate the grasping process and record the contact forces on each contact point. Finally, we transform the continuous normal force values into discrete levels and encode them using one-hot vectors to form our force-aware contact representation.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" style="text-align:center">Stability-Guided Keypoint Selection and Keypoint-Guided Grasp Optimization</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <img src="static/images/framework.png" alt="Labelling" loading="lazy"/>
+        <p style="text-align: justify;">
+          We <b>relate physical stability with geometric properties by identifying keypoints</b>. As few as 3 points can form a stable grasp according to force closure theory. Thus, we intuitively formulate the stability measure as the magnitude of accelerations, based on which the keypoint set with the least acceleration is seleted. These keypoints provide effective initialization and guidance for optimization towards a stable grasp. We formulate a keypoint-guided optimization framework that systematically integrates our force-aware contact representation and stability constraints to generate stable grasps.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3" style="text-align:center">State-of-the-art Stability Measure</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <img src="static/images/quantitative_result.png" alt="Result" loading="lazy"/>
+        <p style="text-align: justify;">
+          We conduct experiments on two public benchmarks, GRAB for in-domain test and HO3D for out-of-domain test, showing that our method outperforms previous methods by a large margin (around 20%) in terms of stability metrics. We also measure the success rate which considers both stability and penetration, and our method achieves a significant improvement over previous methods. Extensive ablation studies are available in the paper.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- 
 <section class="hero is-small">
@@ -422,10 +479,6 @@ End youtube video -->
   </div>
 </section>
 End video carousel -->
-
-
-
-
 
 
 <!-- 
